@@ -1,0 +1,36 @@
+import pytest
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+
+
+
+class Test_skip_demo:
+
+    def test_method1(self):
+        driver=webdriver.Edge("c://Drivers/edgedriver_win64/msedgedriver.exe")
+        driver.get("https://www.actnowcloud.com")
+        driver.maximize_window()
+        time.sleep(8)
+        driver.close()
+    def test_method2(self):
+        driver = webdriver.Edge("c://Drivers/edgedriver_win64/msedgedriver.exe")
+        driver.get("https://www.localtaxicloud.com")
+        driver.maximize_window()
+        time.sleep(8)
+        driver.close()
+    @pytest.mark.skip
+    def test_method3(self):
+        driver = webdriver.Edge("c://Drivers/edgedriver_win64/msedgedriver.exe")
+        driver.get("https://www.saucedemo.com")
+        driver.maximize_window()
+        time.sleep(8)
+        driver.close()
+    @pytest.mark.skip
+    def test_method4(self):
+        driver = webdriver.Edge("c://Drivers/edgedriver_win64/msedgedriver.exe")
+        driver.get("https://www.testautomationpractice.blogspot.com/.com")
+        driver.maximize_window()
+        time.sleep(8)
+        webdriver.quit()
