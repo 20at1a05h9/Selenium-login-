@@ -1,0 +1,23 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+import pytest
+class Test_login:
+    def test_login_facebook(self,setup):
+        self.driver=setup
+        self.driver.get("https://www.facebook.com/")
+        self.driver.maximize_window()
+        time.sleep(5)
+        self.driver.close()
+    def test_login_google(self,setup):
+        self.driver = setup
+        self.driver.get("https://www.google.com/")
+        self.driver.maximize_window()
+        time.sleep(5)
+        self.driver.close()
+    def test_login_phptravels(self,setup):
+        self.driver = setup
+        self.driver.get("https://www.phptravels.com/")
+        self.driver.maximize_window()
+        time.sleep(5)
+        self.driver.close()
